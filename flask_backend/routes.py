@@ -27,7 +27,7 @@ def get_students():
     conn.close()
     return jsonify(students)
 
-# Obtener un estudiante por ID ✅
+# Obtener un estudiante por ID 
 @app.route('/students/<int:id>', methods=['GET'])
 def get_student(id):
     conn = get_connection()
