@@ -9,7 +9,7 @@ Aplicación para el registro de estudiantes, con backend en Flask y frontend en 
 - Python 3.11
 - Flask
 - Django 5.0
-- MySQL (o SQLite si prefieres)
+- MySQL
 - HTML, CSS
 - `requests` para integración
 - `unittest` y `unittest.mock` para testing
