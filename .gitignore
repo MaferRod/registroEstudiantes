@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Environments
+venv/
+.env
+
+# Django
+db.sqlite3
+*.log
+*.pot
+
+# Flask
+instance/
+*.db
+
+# VS Code
+.vscode/
+
+# Node / React
+node_modules/
+build/
+dist/
