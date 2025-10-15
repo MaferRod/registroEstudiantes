@@ -55,11 +55,22 @@ CREATE TABLE students (
     email VARCHAR(255) NOT NULL UNIQUE
 );
 ```
+- Configurar el archivo db_config.py
+```bash
+
+def get_connection():
+    return mysql.connector.connect(
+        host="localhost",        # Servidor local
+        user="root",             # Usuario por defecto en XAMPP
+        password="",             # Contraseña vacía (por defecto)
+        database="students_db",  # Nombre de la base de datos creada
+        port=3306                # Puerto por defecto de MySQL
+    )
+```
 ## Uso
 ### Ejecutar backend (Flask)
 ```bash
 cd flask_backend
-venv\Scripts\activate
 python routes.py
 ```
 Servidor: http://127.0.0.1:5000
@@ -67,7 +78,6 @@ Servidor: http://127.0.0.1:5000
 ### Ejecutar frontend (Django)
 ```bash
 cd django_frontend
-venv\Scripts\activate
 python manage.py runserver
 ```
 

@@ -27,6 +27,20 @@ def get_students():
     conn.close()
     return jsonify(students)
 
+# Obtener un estudiante por ID ✅
+@app.route('/students/<int:id>', methods=['GET'])
+def get_student(id):
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM students WHERE id = %s", (id,))
+    student = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    if student:
+        return jsonify(student)
+    else:
+        return jsonify({"error": "Student not found"}), 404
+
 # Actualizar estudiante
 @app.route('/students/<int:id>', methods=['PUT'])
 def update_student(id):
