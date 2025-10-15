@@ -1,7 +1,7 @@
 Django==5.0.1
-Flask==2.4.2
+Flask
 requests==2.31.0
-mysql-connector-python==8.1.1
+mysql-connector-python
 Werkzeug==2.3.7
 Jinja2==3.1.2
 itsdangerous==2.1.2

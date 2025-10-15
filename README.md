@@ -37,8 +37,9 @@ Linux/macOS:	bashsource venv/bin/activate
 ```bash
    pip install -r requirements.txt
 ```
-## Instalacion de la base de datos
-- Crear base de datos
+## Configuración de la base de datos (XAMPP)
+- Abre XAMPP Control Panel y asegúrate de que MySQL y Apache estén en ejecución.
+- En phpMyAdmin, crea la base de datos:
 ```bash
 CREATE DATABASE students_db;
 ```
@@ -66,6 +67,11 @@ def get_connection():
         database="students_db",  # Nombre de la base de datos creada
         port=3306                # Puerto por defecto de MySQL
     )
+```
+## Archivo requirements
+- Instálalo con:
+```bash
+pip install -r requirements.txt
 ```
 ## Uso
 ### Ejecutar backend (Flask)
